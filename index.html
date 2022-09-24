@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Personal Portfolio</title>
+    </head>
+    <link rel="stylesheet" href="style.css">
+    <body>
+        <div id="header">
+            <div class="container">
+                <nav>
+                    <img src="images/logo.png" class="logo">
+                    <ul>
+                        <li><a href="#">Home</a></li>
+                        <li><a href="#">About</a></li>
+                        <li><a href="#">Services</a></li>
+                        <li><a href="#">Portfolio</a></li>
+                        <li><a href="#">Contact</a></li>
+                    </ul>
+                </nav>
+                <div class="header-text">
+                    <p>STUDENT</hp>
+                    <h1>Hi, I'm <span>Aarti  </span> </h1> 
+
+                </div>
+            </div>
+        </div>
+        <!-- ---------about----------- -->
+        <div id="about">
+            <div class="row">
+                <div class="about-col-1">
+                    <img src="images/user.JPG">
+                </div>
+                <div class="about-col-2">
+                    <h1 class="sub-title">About Me</h1>
+                    <p>Hey I'm Aarti Nagade.<br> I am a student and  currently pursuing Btech from Graphic Era Deemed to Be
+                        University,Dehradoon. I have taken AI and Data Science as
+                        specilisation. I am honest, self-motivated and hardworking person with positive attitude towards my career and life.
+                    </p> 
+                    <div class="tab-tiles">
+                        <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
+                        <p class="tab-links" onclick="opentab('experience')" >Experience</p>
+                        <p class="tab-links" onclick="opentab('education')" >Education</p>
+                    </div>
+                    <div class="tab-contents active-tab" id="skills">
+                        <ul>
+                            <li><span>C/C++</span></li>
+                            <li><span>Python</span></li>
+                            <li><span>Java</span></li>
+                        </ul> 
+                    </div>
+
+                    <div class="tab-contents" id="experience">
+                        <ul>
+                            <li><span>2020-current</span><br> Student at GEU </li>
+                            <li><span>Sept'22-current</span><br> Web development Intern at Oasis Infobyte</li>
+                            <li><span>Aug'22-Sept'22</span><br> Data Science Internship at Code family</li>
+                        </ul> 
+                    </div>
+
+                    <div class="tab-contents" id="education">
+                        <ul>
+                            <li><span>2020-current</span><br> BTech from GEU Dehradoon</li>
+                            <li><span>2020</span><br> 12th from Holy Child School Rudrapur</li>
+                           
+                        </ul> 
+                    </div>
+                </div>
+            </div>
+        </div>
+
+<!-- --------portfolio---------- -->
+<div id="Portfolio">
+    <div class="container">
+        <h1 class="sub-title">My Projects</h1>
+        <div class="Project-list">
+            <div class="work">
+                <img src="images/work1.jpg">
+                <div class="layer">
+                    <h3>Social Network Analysis</h3>
+                    <p> The process of investigating social structures through the use of networks and graph theory.</p>
+                    
+                </div>
+            </div>
+            <div class="work">
+                <img src="images/work2.jpg">
+                <div class="layer">
+                    <h3>Web Scrapper</h3>
+                    <p> It is an automatic method to obtain large amounts of data from websites. Most of this data is unstructured data in an HTML format which is then converted into structured data in a spreadsheet or a database so that it can be used in various applications.</p>
+                    
+                </div>
+            </div>
+            <div class="work">
+                <img src="images/work3.jpg">
+                <div class="layer">
+                    <h3>Image Captioning</h3>
+                    <p>  Image Captioning is the process of generating textual description of an image. It uses both Natural Language Processing and Computer Vision to generate the captions.</p>   
+                </div>
+            </div>
+        </div>
+        <a href="#" class="btn">See more</a>
+    </div>
+</div>
+<!-- -------contact--------- -->
+<div id="contact">
+    <div class="container">
+        <div class="row">
+            <div class="contact-left">
+                <h1 class="sub-title">Contact Me</h1>
+                <p><i class="far fa-paper-plane"></i> - aarti7nagde@gmail.com</p>
+                <p><i class="far fa-phone-square-alt"></i>  - 0123456789</p>               
+                <a href="images/MyCV.pdf" download class="btn btn2"> Download CV</a>
+            </div>
+            <div class="contact-right"></div>
+            <form>
+                <input type="text" name="Name" placeholder="Your Name" required>
+                <input type="email" name="email" placeholder="Your email" required>
+                <textarea name="Message" rows="6" placeholder="Your Message"></textarea>
+                <button type="submit" class=" btn btn2"> Submit</button>
+            </form>
+        </div>
+    </div>
+    <div class="copyright">
+        <p> Copyright @aarti|@2022 All Rights Reserved</p>
+    </div>
+</div>
+
+
+
+
+        <script>
+
+            var tablinks = document.getElementsByClassName("tab-links");
+            var tabcontents = document.getElementsByClassName("tab-contents");
+
+            function opentab(tabname){
+            
+                for(tablink of tablinks){
+                    tablink.classList.remove("active-link");
+                }
+                for(tabcontent of tabcontents){
+                    tabcontent.classList.remove("active-tab");
+                }
+                event.currentTarget.classList.add("active-link");
+                document.getElementById(tabname).classList.add("active-tab");
+            }
+
+        </script>
+
+    </body>
+</html>
